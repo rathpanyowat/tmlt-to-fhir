@@ -1,0 +1,19 @@
+{
+  "name": "tmlt-to-fhir",
+  "version": "1.0.0",
+  "description": "Convert TMLT data to FHIR CodeSystem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["TMLT", "FHIR", "CodeSystem"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "fs-extra": "^11.2.0",
+    "xlsx": "^0.18.5"
+  }
+}

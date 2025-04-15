@@ -1,0 +1,149 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://tmlt.this.or.th",
+  "version": "20250401",
+  "name": "TMT",
+  "title": "Thai Medical Laboratory Terminology (TMLT) 20250401",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-04-01T00:00:00+07:00",
+  "publisher": "Thai Health Information Standards Development Center",
+  "description": "TMLT is a standard dictionary for laboratory observations in Thailand",
+  "copyright": "This content from TMLT is copyright © Thai Health Information Standards Development Center",
+  "caseSensitive": false,
+  "valueSet": "http://tmlt.this.or.th/vs",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "content": "complete",
+  "filter": [
+    {
+      "code": "TYPE",
+      "description": "Allows the selection of a set of TMT codes with a common property value.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "STATUS",
+      "description": "Allows the selection of a set of TMT codes with a common property value.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "COMPONENT",
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "SCALE",
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "UNIT",
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "SPECIMEN",
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    },
+    {
+      "code": "METHOD",
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
+      "operator": [
+        "="
+      ],
+      "value": "The value of the property."
+    }
+  ],
+  "property": [
+    {
+      "code": "TYPE",
+      "type": "code"
+    },
+    {
+      "code": "STATUS",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "type": "code"
+    },
+    {
+      "code": "COMPONENT",
+      "description": "First axis",
+      "type": "string"
+    },
+    {
+      "code": "SCALE",
+      "description": "Second axis",
+      "type": "string"
+    },
+    {
+      "code": "UNIT",
+      "description": "Third axis",
+      "type": "string"
+    },
+    {
+      "code": "SPECIMEN",
+      "description": "Fourth axis",
+      "type": "string"
+    },
+    {
+      "code": "METHOD",
+      "description": "Fifth axis",
+      "type": "string"
+    }
+  ],
+  "concept": [
+    {
+      "code": "TEMPLATE",
+      "display": "TEMPLATE",
+      "property": [
+        {
+          "code": "TYPE",
+          "valueCode": "TEMPLATE"
+        },
+        {
+          "code": "STATUS",
+          "valueCode": "active"
+        },
+        {
+          "code": "COMPONENT",
+          "valueString": "TEMPLATE"
+        },
+        {
+          "code": "SCALE",
+          "valueString": "TEMPLATE"
+        },
+        {
+          "code": "UNIT",
+          "valueString": "TEMPLATE"
+        },
+        {
+          "code": "SPECIMEN",
+          "valueString": "TEMPLATE"
+        },
+        {
+          "code": "METHOD",
+          "valueString": "TEMPLATE"
+        }
+      ]
+    }
+  ]
+}
