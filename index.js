@@ -2,9 +2,10 @@ const fs = require('fs-extra');
 const path = require('path');
 const AdmZip = require('adm-zip');
 const XLSX = require('xlsx');
-const config = require('./config');
 
-// Get the version from config
+// Get the version from config.json
+const configPath = path.join(__dirname, 'config.json');
+const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const version = config.version;
 
 // Paths
@@ -12,7 +13,6 @@ const inputDir = path.join(__dirname, 'input');
 const outputDir = path.join(__dirname, 'output');
 const templatePath = path.join(inputDir, 'TMLT-CS-template.json');
 const zipPath = path.join(inputDir, `TMLTRF${version}.zip`);
-const outputPath = path.join(outputDir, 'CS-TMLT.js');
 
 // Ensure output directory exists
 fs.ensureDirSync(outputDir);
@@ -166,12 +166,10 @@ async function processZipFile() {
     template.title = `Thai Medical Laboratory Terminology (TMLT) ${version}`;
     template.date = `${version.substring(0, 4)}-${version.substring(4, 6)}-${version.substring(6, 8)}T00:00:00+07:00`;
     
-    // Write the result to a JS file
-    const jsContent = `// Generated TMLT CodeSystem - Version ${version}
-module.exports = ${JSON.stringify(template, null, 2)};`;
-    
-    fs.writeFileSync(outputPath, jsContent, 'utf8');
-    console.log(`Output written to ${outputPath}`);
+    // Write the result as a JSON file
+    const outputJsonPath = path.join(outputDir, 'CS-TMLT.json');
+    fs.writeFileSync(outputJsonPath, JSON.stringify(template, null, 2), 'utf8');
+    console.log(`JSON output written to ${outputJsonPath}`);
     
     // Clean up
     fs.removeSync(tempDir);
