@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "url": "http://tmlt.this.or.th",
   "version": "20250401",
-  "name": "TMT",
+  "name": "TMLT",
   "title": "Thai Medical Laboratory Terminology (TMLT) 20250401",
   "status": "active",
   "experimental": false,
@@ -19,58 +19,44 @@
   "filter": [
     {
       "code": "TYPE",
-      "description": "Allows the selection of a set of TMT codes with a common property value.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows the selection of a set of TMLT codes with a common property value.",
+      "operator": ["="],
       "value": "The value of the property."
     },
     {
       "code": "STATUS",
-      "description": "Allows the selection of a set of TMT codes with a common property value.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows the selection of a set of TMLT codes with a common property value.",
+      "operator": ["="],
       "value": "The value of the property."
     },
     {
       "code": "COMPONENT",
-      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMLT hierarchy.",
+      "operator": ["=", "regex"],
       "value": "The value of the property."
     },
     {
       "code": "SCALE",
-      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMLT hierarchy.",
+      "operator": ["=", "regex"],
       "value": "The value of the property."
     },
     {
       "code": "UNIT",
-      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMLT hierarchy.",
+      "operator": ["=", "regex"],
       "value": "The value of the property."
     },
     {
       "code": "SPECIMEN",
-      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMLT hierarchy.",
+      "operator": ["=", "regex"],
       "value": "The value of the property."
     },
     {
       "code": "METHOD",
-      "description": "Allows for the selection of a set of codes base on their appearance in the TMT hierarchy.",
-      "operator": [
-        "="
-      ],
+      "description": "Allows for the selection of a set of codes base on their appearance in the TMLT hierarchy.",
+      "operator": ["=", "regex"],
       "value": "The value of the property."
     }
   ],
